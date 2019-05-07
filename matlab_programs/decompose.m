@@ -1,5 +1,5 @@
-function [v_c, v_l] = decompose( v )
+function [v_c, v_l] = decompose( v, g )
 
-v_c=[v(1);v(2);0];
-v_l=-v(3);
+v_l = sp(v, g);
+v_c = v - g*v_l;
 end
