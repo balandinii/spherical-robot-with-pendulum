@@ -9,7 +9,7 @@ otkl=0.0001;
 state=[otkl;0;sqrt(1-otkl*otkl);0;0;0;0;0;0;0;0;0];
  
 %Решаем систему
-[T,STATE_EV]=ode23t('total_calc', 0:0.001:30, state);
+[T,STATE_EV]=ode45('total_calc', 0:0.001:30, state);
  
 %Выводим график интересующей нас величины от времени
 plot(T, STATE_EV(1:30001, 1))
