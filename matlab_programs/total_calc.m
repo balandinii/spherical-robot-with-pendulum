@@ -5,7 +5,7 @@ J=666666;
 j=1.0e-10;
 p=1;
 mu=1.0e6;
-gamma=[0.1;0.2;-sqrt(1-0.1*0.1-0.2*0.2)];
+gamma=[0; 0; -1];
 
 %управление системой
 q=Q(t, state);
@@ -16,7 +16,7 @@ e=[state(1);state(2);state(3)];
 w=[state(4);state(5);state(6)];
 omega=[state(7);state(8);state(9)];
 xi=[state(10);state(11);state(12)];
-gamma_k=gamma;
+gamma_k=normal(xi);
 
 %вычисление t_w и t_omega
 phi=equation_9( q, p, gamma, gamma_k, omega, e, mu );
