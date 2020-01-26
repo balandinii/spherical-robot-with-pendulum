@@ -1,8 +1,10 @@
 function [ gamma_k ] = normal( xi )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
 
-gamma_k=[0;0.1;-sqrt(0.99)];
+A = 1;
+b = 100;
+vec = [-2*A*xi(1)/b/b; 0; -1];
+
+gamma_k = vec/sqrt(sp(vec, vec));
 
 end
 
