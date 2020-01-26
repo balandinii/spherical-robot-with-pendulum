@@ -8,9 +8,9 @@ ans = [0;0;0];
 if(t<30)
     ans(2) = -1;
 end
-if(t>100)
+if(t>120)
     ans(2) = - 0.1*omega(2);
 end
-%q=ans;
-q=[0;0;0];
+q=ans;
+%q=[0;0;0];
 end
